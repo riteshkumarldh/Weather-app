@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- # Primary meta tags -->
+    <title>Weather-App</title>
+    <meta name="title" content="Weather-App">
+    <meta name="description" content="Current weather App">
+
+    <!-- # font awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- # Custom css file -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- # custom js file -->
+    <script src="./script.js" defer></script>
+
+</head>
+<body>
+
+    <div class="wrapper" data-wrapper>
+        <div class="header"><i class="fa fa-arrow-left" aria-hidden="true" data-back></i> Weather App</div>
+
+        <div class="input-container">
+            <p class="status" data-status>Failed to fetch data</p>
+            <div class="input">
+                <input type="search" name="search" data-search placeholder="Search any city" spellcheck="false">
+                <i class="fa fa-location-arrow" aria-hidden="true"></i>
+            </div>
+            <div class="divider"></div>
+            <button class="btn" data-button>My current Location</button>
+        </div>
+
+        <div class="weather" data-weather>
+            <div class="weather-icon">
+                <img src="./icons/clear.svg" alt="icon" data-weather-icon>
+            </div>
+            <div class="temp" data-temp></div>
+            <p class="weather-status" data-weather-status></p>
+            <div class="loc" data-location> <!-- <i class="fa fa-location-arrow" aria-hidden="true"></i> Ludhiana,IN --> </div>
+            <div class="other-details">
+                <div class="left">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                    <div class="feels-like" data-feels-like>
+                        <!-- <p class="deg">27°C</p>
+                        <p>Feels like</p> -->
+                    </div>
+                </div>
+                <div class="right">
+                    <i class="fa fa-tint" aria-hidden="true"></i>
+                    <div class="feels-like" data-humidity>
+                        <!-- <p class="deg">35%</p>
+                        <p>Humidity</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>

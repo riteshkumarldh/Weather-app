@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input, button {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 8px;
+    height: 55px;
+}
+button {
+    cursor: pointer;
+}
+
+body {
+    font-family: "poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: hsla(205, 100%, 50%)
+}
+
+.wrapper {
+    max-width: 500px;
+    width: 100%;
+    background-color: hsla(0, 0%, 100% , 0.5);
+    border-radius: 10px;
+    
+}
+
+.wrapper .header {
+    padding: 10px 10px;
+    border-bottom: 1px solid hsl(0, 0%, 20%);
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: hsla(205, 100%, 50%);
+}
+
+.header i {
+    margin-right: 10px;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    border-radius: 6px;
+    display: none;
+}
+.header i:hover {
+    background-color: hsla(0, 0%, 95% , 0.4);
+}
+
+.input-container {
+    padding: 15px;
+}
+
+.input-container .status {
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 6px;
+    display: none;
+}
+.input-container .status.error {
+    background-color: hsla(0, 100%, 75%, 0.25);
+    display: block;
+}
+.input-container .status.pending {
+    background-color: hsla(56, 100%, 50%, 0.25);
+    display: block;
+}
+
+.input-container .input {
+    margin-block: 15px;
+    position: relative;
+}
+.input input {
+    padding: 0 15px 0 40px;
+    font-size: 17px;
+    border: 2px solid hsl(0, 0%, 30%);
+}
+.input input:is(:focus) {
+    border: 2px solid hsla(205, 100%, 50%);
+}
+.input input::placeholder {
+    color: hsl(0, 0%, 35%);
+}
+.input i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+.input-container .divider {
+    height: 1.5px;
+    width: 100%;
+    background-color: hsla(205, 100%, 90%);
+    margin-block: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-container .divider::before {
+    content: "or";
+    background-color: hsla(0, 0%, 100%);
+    border-radius: 6px;
+    padding: 10px;
+    margin-bottom: 4px;
+}
+.input-container .btn {
+    background-color: hsla(205, 100%, 50%);
+    color: white;
+    font-size: 18px;
+    transform: scale(1);
+    transition: 0.4s;
+}
+.input-container .btn:hover {
+    background-color: hsla(205, 100%, 45%);
+    transform: scale(1.02);
+}
+
+img {
+    max-width: 130px;
+}
+
+/* 
+    #adding classses through js
+*/
+
+.wrapper.active .input-container {
+    display: none;
+}
+
+.wrapper.active .header i{
+    display: inline-block;
+}
+
+.wrapper.active .weather {
+    display: flex;
+}
+
+/* 
+    // end
+*/
+
+.weather {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 15px;
+    display: none;
+}
+.weather .temp {
+    font-size: 64px;
+    font-weight: 600;
+}
+.weather .weather-status,
+.weather .loc {
+    font-size: 22px;
+    margin-bottom: 18px;
+}
+
+.weather .other-details {
+    display: flex;
+    width: 100%;
+    border-top: 1px solid hsla(0, 0%, 100% , 0.5);
+}
+.other-details .left,
+.other-details .right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;
+}
+.other-details .left i,
+.other-details .right i {
+    font-size: 36px;
+    color: hsla(0, 0%, 35% , 0.8);
+} 
+
+.other-details .left {
+    border-right: 1px solid hsla(0, 0%, 100% , 0.5);
+
+}
