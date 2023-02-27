@@ -1,3 +1,3 @@
 # Weather-app
 
-Demo: riteshkumarldh.github.io/Weather-app/
+[Demo link](riteshkumarldh.github.io/Weather-app/)
