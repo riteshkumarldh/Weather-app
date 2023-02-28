@@ -113,12 +113,12 @@ function updatingData(data) {
 
     // upding all the data dynamically based on fetched data
     if(id == 800) { document.querySelector("[data-weather-icon]").src = `http://openweathermap.org/img/wn/${icon}@2x.png`; }
-    else if(id >= 801 || id <= 804) { document.querySelector("[data-weather-icon]").src = "./icons/cloud.svg"; }
-    else if(id >= 701 || id <= 781) { document.querySelector("[data-weather-icon]").src = "./icons/cloud.svg"; }
-    else if(id >= 600 || id <= 622) { document.querySelector("[data-weather-icon]").src = "./icons/snow.svg"; }
-    else if(id >= 500 || id <= 531) { document.querySelector("[data-weather-icon]").src = "./icons/rain.svg"; }
-    else if(id >= 300 || id <= 321) { document.querySelector("[data-weather-icon]").src = "./icons/haze.svg"; }
-    else if(id >= 200 || id <= 232) { document.querySelector("[data-weather-icon]").src = "./icons/storm.svg"; }
+    else if(id >= 801 && id <= 804) { document.querySelector("[data-weather-icon]").src = "./icons/cloud.svg"; }
+    else if(id >= 701 && id <= 781) { document.querySelector("[data-weather-icon]").src = "./icons/cloud.svg"; }
+    else if(id >= 600 && id <= 622) { document.querySelector("[data-weather-icon]").src = "./icons/snow.svg"; }
+    else if(id >= 500 && id <= 531) { document.querySelector("[data-weather-icon]").src = "./icons/rain.svg"; }
+    else if(id >= 300 && id <= 321) { document.querySelector("[data-weather-icon]").src = "./icons/haze.svg"; }
+    else if(id >= 200 && id <= 232) { document.querySelector("[data-weather-icon]").src = "./icons/storm.svg"; }
     else { `http://openweathermap.org/img/wn/${icon}@2x.png`; };
 
     document.querySelector("[data-temp]").textContent = `${temp.toFixed()}°C`;
